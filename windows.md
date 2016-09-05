@@ -1,16 +1,20 @@
 # Clean install of Windows (WIP)
 
-use rufus to make gpt ntfs usb stick, volume name WINPE
-copy win10 files
+## Prepare your USB stick:
 
-bios, change mode from android to windows
+1. Format the USB as NTFS, with GPT partition table
+2. Name the NTFS volume "Winpe"
+3. Copy the Windows 10 files from Chuwi to the Winpe volume.
 
-boot, select windows
+## Set the tablet to Windows mode
 
-it will fail if you've still got a linux/android formatted emmc
+1. In the BIOS change device mode to `Windows`
 
-
-the following will erase emmc so windows can be installed
+## Start the Windows installer
+1. While booting, hold `F7` and select your USB stick
+2. Windows PE will start and automatically try to erase the internal memory and install Windows.
+ 
+If it fails to erase the internal memory, you can do it yourself with the following commands
 
 ```
 diskpart
@@ -21,12 +25,6 @@ convert gpt
 exit
 ```
 
-reboot, select windows again
+After that's done, reboot and select your USB stick again.
 
-it will install successfully, will take a while
-
-reboot, remove usb, select windows
-
-it will take a little while and will reboot a couple of times
-
-you will be prompted through the getting started process
+The installer will take a little while depending on the speed of your USB stick, and it will reboot the tablet a number of times during the install.
