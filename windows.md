@@ -1,5 +1,7 @@
 # Clean install of Windows (WIP)
 
+Using the Windows 10 files provided by Chuwi here: http://forum.chuwi.com/thread-2116-1-1.html
+
 ## Prepare your USB stick:
 
 1. Format the USB as NTFS, with GPT partition table
